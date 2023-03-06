@@ -16,14 +16,13 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $images = Storage::allFiles('images');
-
-        foreach($images as $image)
-        {
-            if(strpos($image, ".DS_Store")) continue;
+        foreach ($images as $image) {
+            if (strpos($image, ".DS_Store")) continue;
             Image::factory()->create([
-                'file' => $image
+                'file' => $image,
+                'dimension' => Image::getDimension($image)
             ]);
         }
-
+        
     }
 }
