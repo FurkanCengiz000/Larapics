@@ -76,6 +76,10 @@ class Image extends Model
                 $image->is_published = true;
             }
         });
+
+        static::deleted(function ($image) {
+            Storage::delete($image->file);
+        });
     }
 
 }
