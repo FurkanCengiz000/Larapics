@@ -12,4 +12,7 @@
             <img src="{{ $image->fileUrl() }}" alt="{{ $image->title }}" width="300">
         </a>
     </div>
+    
+    <a href="{{ $image->route('edit') }}">Edit</a>
+
 @endforeach
