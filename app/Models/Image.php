@@ -10,6 +10,8 @@ class Image extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title', 'file', 'dimension', 'user_id'];
+
     public static function makeDirectory()
     {
         $subFolder = 'images/' . date('Y/m/d');
@@ -35,7 +37,7 @@ class Image extends Model
 
     public function permalink()
     {
-        return route('images.show', $this->slug);
+        return $this->slug ? route('images.show', $this->slug) : '#';
     }
 
 }

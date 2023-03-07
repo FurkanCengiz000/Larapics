@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Image;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ImageRequest extends FormRequest
@@ -26,4 +27,23 @@ class ImageRequest extends FormRequest
             'title' => 'nullable'
         ];
     }
+
+    public function getData()
+    {
+        $data = $this->validated() + [
+            'user_id' => 1 // $this->user()->id
+        ];
+
+        if ($this->hasFile('file'))
+        {
+            $directory = Image::makeDirectory();
+
+            $data['file'] = $this->file->store($directory);
+            $data['dimension'] = Image::getDimension($data['file']);
+        }
+
+        return $data;
+
+    }
+
 }
