@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 </head>
 <body>
 
@@ -14,6 +15,7 @@
     
     <x-icon :src="$icon" />
     <x-ui.button />
-
+    <x-alert type="danger" />
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
