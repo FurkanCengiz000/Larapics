@@ -7,8 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+
+    @php
+        $icon = "logo.svg";
+    @endphp
     
-    <x-icon />
+    <x-icon :src="$icon" />
     <x-ui.button />
 
 </body>
