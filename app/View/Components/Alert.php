@@ -9,6 +9,7 @@ use Illuminate\View\Component;
 class Alert extends Component
 {
     public $type;
+    public $dismissible;
 
     protected $types = [
         "primary",
@@ -24,9 +25,10 @@ class Alert extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct($type = "info")
+    public function __construct($type = "info", $dismissible = false)
     {
         $this->type = $type;
+        $this->dismissible = $dismissible;
     }
 
     public function validType()
