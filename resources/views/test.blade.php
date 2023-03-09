@@ -15,7 +15,7 @@
     
     <x-icon :src="$icon" />
     <x-ui.button />
-    <x-alert type="danger" />
+    <x-alert type="danger" id="my-alert" role="flash" class="mt-4" />
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
