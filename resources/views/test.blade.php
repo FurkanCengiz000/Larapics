@@ -15,7 +15,15 @@
     
     <x-icon :src="$icon" />
     <x-ui.button />
-    <x-alert type="danger" dismissible id="my-alert" role="flash" class="mt-4" />
+    <x-alert type="success" dismissible id="my-alert" role="flash" class="mt-4">
+        <x-slot:title>
+            Success
+        </x-slot>
+        <x-slot:message>
+            Data has been sent
+        </x-slot>
+        
+    </x-alert>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
