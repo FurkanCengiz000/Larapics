@@ -13,15 +13,18 @@
         $icon = "logo.svg";
     @endphp
     
-    <x-icon :src="$icon" />
-    <x-ui.button />
-    <x-alert type="success" dismissible id="my-alert" role="flash" class="mt-4">
-        <x-slot:title>
+    {{-- <x-icon :src="$icon" />
+    <x-ui.button /> --}}
+    <x-alert type="danger" dismissible id="my-alert" role="flash" class="mt-4 d-flex align-item-center">
+        {{-- <x-slot:title>
             Success
         </x-slot>
         <x-slot:message>
             Data has been sent
-        </x-slot>
+        </x-slot> --}}
+
+        {{ $component->icon() }}
+        <p class="mb-0">Data has been removed. {{ $component->link("Undo") }}</p>
         
     </x-alert>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>

@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\HtmlString;
 use Illuminate\View\Component;
 
 class Alert extends Component
@@ -12,14 +13,10 @@ class Alert extends Component
     public $dismissible;
 
     protected $types = [
-        "primary",
-        "secondary",
         "success",
         "danger",
         "warning",
-        "info",
-        "light",
-        "dark"
+        "info"
     ];
 
     /**
@@ -34,6 +31,18 @@ class Alert extends Component
     public function validType()
     {
         return in_array($this->type, $this->types) ? $this->type : "info";
+    }
+
+    public function link($text, $target = "#")
+    {
+        return new HtmlString("<a href=\"{$target}\" class=\"alert-link\">{$text}</a>");
+    }
+
+    public function icon ($url = null)
+    {
+        $icon = $url ?? asset("icons/icon-$this->type" . ".svg");
+
+        return new HtmlString("<img class = 'me-2' src = '$icon' >");
     }
 
     /**
