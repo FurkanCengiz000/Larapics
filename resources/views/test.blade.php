@@ -27,6 +27,12 @@
         <p class="mb-0">Data has been removed. {{ $component->link("Undo") }}</p>
         
     </x-alert>
+
+    <x-form action="/images" method="PUT">
+        <input type="text" name="name">
+        <button type="submit">Submit</button>
+    </x-form>
+
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
