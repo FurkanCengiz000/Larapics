@@ -15,7 +15,7 @@
     
     {{-- <x-icon :src="$icon" />
     <x-ui.button /> --}}
-    <x-alert type="danger" dismissible id="my-alert" role="flash" class="mt-4 d-flex align-item-center">
+    <x-alert type="danger" id="my-alert" role="flash" class="mt-4">
         {{-- <x-slot:title>
             Success
         </x-slot>
