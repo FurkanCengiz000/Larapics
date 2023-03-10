@@ -1,3 +1,1 @@
-<div>
-    <img src="{{$src}}">
-</div>
+<img src="{{ $src }}" {{ $attributes }}>
