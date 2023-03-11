@@ -27,12 +27,12 @@ class Alert extends Component
     public function __construct($type = "info", $dismissible = false)
     {
         $this->type = $this->validType($type);
+        $this->classes[] = "alert-{$this->type}";
         if($dismissible)
         {
-            $this->classes = 'alert-dismissible fade show';
+            $this->classes[] = 'alert-dismissible fade show';
         }
         $this->dismissible = $dismissible;
-        $this->classes[] = "alert-{$this->type}";
     }
 
     protected function validType($type)
