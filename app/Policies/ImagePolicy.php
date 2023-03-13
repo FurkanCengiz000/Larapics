@@ -14,7 +14,7 @@ class ImagePolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -22,7 +22,7 @@ class ImagePolicy
      */
     public function view(User $user, Image $image): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -30,7 +30,7 @@ class ImagePolicy
      */
     public function create(User $user): bool
     {
-        //
+        return true;
     }
 
     /**
