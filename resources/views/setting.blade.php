@@ -1,6 +1,6 @@
 <x-layout title="Setting">
     <div class="container py-4">
-        <form action="">
+        <x-form action="{{ route('settings.update') }}" method="PUT">
             <div class="row gx-5">
                 <div class="col-md-6">
                     <fieldset>
@@ -53,8 +53,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="new_password_confirmation" class="form-label">New Password confirmation</label>
-                            <input type="password" name="account[new_password_confirmation]" id="new_password_confirmation"
-                                class="form-control">
+                            <input type="password" name="account[new_password_confirmation]"
+                                id="new_password_confirmation" class="form-control">
                         </div>
                     </fieldset>
                 </div>
@@ -74,23 +74,47 @@
                         <legend>Online Profiles</legend>
                         <div class="mb-3">
                             <label class="form-label" for="facebook">Facebook</label>
-                            <input type="text" name="social[facebook]" id="facebook" class="form-control"
-                                placeholder="https://www.facebook.com/...">
+                            <input type="text" name="social[facebook]" id="facebook"
+                                class="form-control @error('social.facebook') is-invalid @enderror"
+                                placeholder="https://www.facebook.com/..."
+                                value="{{ old('social.facebook', $user->social->facebook) }}">
+
+                            @error('social.facebook')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="twitter">Twitter</label>
-                            <input type="text" name="social[twitter]" id="twitter" class="form-control"
-                                placeholder="https://twitter.com/...">
+                            <input type="text" name="social[twitter]" id="twitter"
+                                class="form-control @error('social.twitter') is-invalid @enderror"
+                                placeholder="https://twitter.com/..."
+                                value="{{ old('social.twitter', $user->social->twitter) }}">
+
+                            @error('social.twitter')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="instagram">Instagram</label>
-                            <input type="text" name="social[instagram]" id="instagram" class="form-control"
-                                placeholder="https://www.instagram.com/...">
+                            <input type="text" name="social[instagram]" id="instagram"
+                                class="form-control @error('social.instagram') is-invalid @enderror"
+                                placeholder="https://www.instagram.com/..."
+                                value="{{ old('social.instagram', $user->social->instagram) }}">
+
+                            @error('social.instagram')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="website">Website</label>
-                            <input type="text" name="social[website]" id="website" class="form-control"
-                                placeholder="https://...">
+                            <input type="text" name="social[website]" id="website"
+                                class="form-control @error('social.website') is-invalid @enderror"
+                                placeholder="https://..."
+                                value="{{ old('social.website', $user->social->website) }}">
+
+                            @error('social.website')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                     </fieldset>
                     <fieldset class="mt-3">
@@ -128,7 +152,8 @@
                         <div class="mb-3">
                             <label class="form-label">Email Notifications</label>
                             <div class="form-check">
-                                <input type="hidden" name="settings[email_notification][new_comment]" value="0">
+                                <input type="hidden" name="settings[email_notification][new_comment]"
+                                    value="0">
                                 <input class="form-check-input" type="checkbox"
                                     name="options[email_notification][new_comment]" id="email_notification_no"
                                     value="1" checked>
@@ -140,7 +165,8 @@
                                 <input class="form-check-input" type="checkbox"
                                     name="options[email_notification][new_image]" id="email_notification_yes"
                                     value="1" checked>
-                                <label class="form-check-label" for="disable_comments_new_image">Notify me of new images
+                                <label class="form-check-label" for="disable_comments_new_image">Notify me of new
+                                    images
                                     uploaded</label>
                             </div>
                         </div>
@@ -151,6 +177,6 @@
             <div class="d-flex justify-content-center py-3">
                 <button class="btn btn-lg btn-success">Save changes</button>
             </div>
-        </form>
+        </x-form>
     </div>
 </x-layout>
