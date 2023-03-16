@@ -65,6 +65,23 @@ class User extends Authenticatable
         return $this->hasOne(Social::class)->withDefault();
     }
 
+    public function setting()
+    {
+        return $this->hasOne(Setting::class)->withDefault();
+    }
+
+    protected static function booted()
+    {
+        static::created(function ($user) {
+            $user->setting()->create([
+                'email_notification' => [
+                    'new_comment' => 1,
+                    'new_image' => 1
+                ]
+            ]);
+        });
+    }
+
     public function getImagesCount()
     {
         $imagesCount = $this->images()->published()->count();
