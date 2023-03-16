@@ -42,6 +42,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function updateSettings($data)
+    {
+        $this->updateSocialProfile($data['social']);
+    }
+
+    protected function updateSocialProfile($social)
+    {
+        Social::updateOrCreate(
+            ['user_id' => $this->id],
+            $social
+        );
+    }
+
     public function images()
     {
         return $this->hasMany(Image::class);
