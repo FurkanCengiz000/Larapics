@@ -1,66 +1,86 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Larapics
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+I developed this website for photos and photographers. I used Authorization, authentication, file upload, CRUD etc. in Larpics Project. I used laravel/larvevelui on authentication side. I got a some help from [udemy course](https://www.udemy.com/course/laravel-blog-development/) in project development.
 
-## About Laravel
+## Home Page
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<br />
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![HomePage1](https://user-images.githubusercontent.com/126884885/228634517-a0514b5c-0b6e-438b-b21f-0f9a9e995fc1.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+*******************************************************************************************************************************************************
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![HomePage2](https://user-images.githubusercontent.com/126884885/228634584-ad865b81-51ec-42e0-b868-55c287463c8d.png)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<br />
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Login Page
 
-## Laravel Sponsors
+<br />
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![Login](https://user-images.githubusercontent.com/126884885/228634994-6caabbd2-3639-4054-b447-9c2e688d52cd.png)
 
-### Premium Partners
+<br />
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![LoggedIn](https://user-images.githubusercontent.com/126884885/228635614-20a058fc-e5df-493a-bbf5-36290b225eb4.png)
 
-## Contributing
+<br />
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Register Page
 
-## Code of Conduct
+<br />
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![Register](https://user-images.githubusercontent.com/126884885/228635251-10ad2e76-07ce-4b65-971e-6c6db6192f5b.png)
 
-## Security Vulnerabilities
+<br />
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## User's Images Page
 
-## License
+<br />
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![AccountImages](https://user-images.githubusercontent.com/126884885/228638110-7ef30fcc-00a0-4ba2-af78-66db907765aa.png)
+
+<br />
+
+## Image Edit Page
+<br />
+
+![ImageEdit](https://user-images.githubusercontent.com/126884885/228638470-dee0d2a6-14ed-48ae-ba19-270ef4ff3756.png)
+
+<br />
+
+## Image Show Page
+
+<br />
+
+![ImageShow](https://user-images.githubusercontent.com/126884885/228638689-389d220f-ee1f-45c4-8f4e-38a47cbd1a00.png)
+
+<br />
+
+## Image Upload Page
+
+<br />
+
+![ImageUpload](https://user-images.githubusercontent.com/126884885/228638955-0dfec892-cdee-4b46-a03e-8e1f5743ddcd.png)
+
+<br />
+
+## User Details Page
+
+<br />
+
+![UserDetails](https://user-images.githubusercontent.com/126884885/228639185-2206f95d-7a9c-4ce3-ad75-a3be2b85b3f3.png)
+
+<br />
+
+## User Settings Page
+
+<br />
+
+![UserSettings1](https://user-images.githubusercontent.com/126884885/228639428-141f1b8c-38b1-4452-aa46-ae71af07f2ba.png)
+
+*******************************************************************************************************************************************************
+
+![UserSettings2](https://user-images.githubusercontent.com/126884885/228639517-814386f7-8b93-491e-95ca-65c5271489c0.png)
+
